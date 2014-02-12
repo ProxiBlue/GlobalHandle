@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <ProxiBlue_GlobalHandle>
+            <version>0.0.1</version>
+        </ProxiBlue_GlobalHandle>
+    </modules>
+    <global>
+        <models>
+            <globalhandle>
+                <class>ProxiBlue_GlobalHandle_Model</class>
+            </globalhandle>
+        </models>    
+        <resources>
+            <proxiblue_globalhandle_setup>
+                <setup>
+                    <module>ProxiBlue_GlobalHandle</module>
+                </setup>
+            </proxiblue_globalhandle_setup>
+        </resources>
+    </global>
+    <frontend>
+        <events>
+            <controller_action_layout_load_before>
+                <observers>
+                    <globalhandle_controller_action_layout_load_before>
+                        <class>globalhandle/observer</class>
+                        <method>controller_action_layout_load_before</method>
+                    </globalhandle_controller_action_layout_load_before>
+                </observers>
+            </controller_action_layout_load_before>
+        </events>
+    </frontend>
+</config>
