@@ -28,4 +28,11 @@ Using this, it is, for example possible to override all page layouts to one base
     </GLOBAL_OVERRIDE>
 
 
-This then effectively makes the entire site 2columns-left, and no page is accidentally missed, and display in the wrong column structure.
+This then effectively makes the entire site 2columns-left, and no page is accidentally missed, and display in the wrong column structure.<br/>
+
+The following handles are also now injected:<br/><br/>
+
+CMS_<PAGE_NAME> example CMS_about_us<br/>
+CATEGORY_<name> example CATEGORY_best_sellers<br/>
+
+
