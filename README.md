@@ -28,14 +28,16 @@ Using this, it is, for example possible to override all page layouts to one base
     </GLOBAL_OVERRIDE>
 
 
-This then effectively makes the entire site 2columns-left, and no page is accidentally missed, and display in the wrong column structure.<br/>
+This then effectively makes the entire site 3columns, and no page is accidentally missed, and display in the wrong column structure.<br/>
 
 The following handles are also now injected:<br/><br/>
 
-CMS_<PAGE_NAME> example CMS_about_us<br/>
-CATEGORY_<name> example CATEGORY_best_sellers<br/>
+    CMS_<PAGE_NAME>  : example CMS_about_us<br/>
+    CATEGORY_<name>  : example CATEGORY_best_sellers<br/>
 
-DYNAMIC HANDLE<br/>
+DYNAMIC HANDLE
+==============
+
 Inject a new handle based on the given GET or POST variable called 'dynamic'
 An example would be to inject a new handle to display a custom registration page
 In this example we called it 'slim'
@@ -67,7 +69,38 @@ which will inject a new handle called : slim_dynamic_handle which you can target
 The end result of the above would be a scaled down version of the account registration,
 with its own template file, css etc
 
+Another example would be to add a new field (example a coupon field) to the registration form:
 
 
+    /customer/account/create/dynamic/coupon/ is the url used
 
 
+then in local.xml you can use:
+
+    <coupon_dynamic_handle translate="label">
+        <update name="customer_account_create"/>
+        <reference name="customer_form_register">
+            <block type="customer/form_register" name="form.additional.info" template="customer/form/fields/coupon.phtml"/>
+            <remove name="inchoo_socialconnect_register"/>
+        </reference>
+    </coupon_dynamic_handle>
+
+
+which will inject the template customer/form/fields/coupon.phtml into the registration form
+
+The template itself would simply the the field:
+
+    <li class="fields">
+        <div class="field">
+           <label for="email_address" class="required"><em>*</em><?php echo $this->__('Enter Coupon') ?>
+           </label>
+     
+           <div class="input-box">
+                <input autocomplete="off" placeholder="<?php echo $this->__('Enter Your Coupon Here') ?>" type="text"
+                       name="coupon" id="coupon"
+                      value="<?php echo $this->escapeHtml($this->getFormData()->getCoupon()) ?>"
+                      title="<?php echo $this->__('Coupon') ?>"
+                      class="input-text required-entry"/>
+           </div>
+       </div>
+    </li>
