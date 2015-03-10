@@ -2,7 +2,7 @@
 <config>
     <modules>
         <ProxiBlue_GlobalHandle>
-            <version>0.0.1</version>
+            <version>1.0.0</version>
         </ProxiBlue_GlobalHandle>
     </modules>
     <global>
@@ -10,7 +10,7 @@
             <globalhandle>
                 <class>ProxiBlue_GlobalHandle_Model</class>
             </globalhandle>
-        </models>    
+        </models>
         <resources>
             <proxiblue_globalhandle_setup>
                 <setup>

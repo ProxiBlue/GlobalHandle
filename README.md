@@ -35,4 +35,39 @@ The following handles are also now injected:<br/><br/>
 CMS_<PAGE_NAME> example CMS_about_us<br/>
 CATEGORY_<name> example CATEGORY_best_sellers<br/>
 
+DYNAMIC HANDLE<br/>
+Inject a new handle based on the given GET or POST variable called 'dynamic'
+An example would be to inject a new handle to display a custom registration page
+In this example we called it 'slim'
+
+    /customer/account/create/dynamic/slim/ is the url used
+
+which will inject a new handle called : slim_dynamic_handle which you can target via layout xml:
+
+    <slim_dynamic_handle translate="label">
+        <update name="customer_account_create"/>
+        <label>Customer Account Slim Registration Form</label>
+        <!-- Mage_Customer -->
+        <remove name="right"/>
+        <remove name="left"/>
+        <remove name="header"/>
+        <remove name="footer"/>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/slim.css</stylesheet></action>
+        </reference>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="customer_form_register">
+            <action method="setTemplate"><template>customer/form/slim.phtml</template></action>
+        </reference>
+    </slim_dynamic_handle>
+
+
+The end result of the above would be a scaled down version of the account registration,
+with its own template file, css etc
+
+
+
+
 

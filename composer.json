@@ -1,0 +1,28 @@
+{
+  "name": "proxiblue/globalhandle",
+  "type": "magento-module",
+  "license": "OSL-3.0",
+  "homepage": "https://github.com/ProxiBlue/GlobalHandle",
+  "description": "inject various handles into the layout",
+  "authors": [
+    {
+      "name": "Lucas van Staden",
+      "email": "sales@proxiblue.com.au"
+    }
+  ],
+  "require": {
+    "magento-hackathon/magento-composer-installer": "*"
+  },
+  "extra": {
+    "map": [
+      [
+        "/app/code/community/ProxiBlue/GlobalHandle/",
+        "/app/code/community/ProxiBlue/GlobalHandle/"
+      ],
+      [
+        "/app/etc/modules/ProxiBlue_GlobalHandle.xml",
+        "/app/etc/modules/ProxiBlue_GlobalHandle.xml"
+      ]
+    ]
+  }
+}
