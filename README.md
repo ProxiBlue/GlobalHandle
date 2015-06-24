@@ -106,7 +106,7 @@ The template itself would simply the the field:
     </li>
 
 
-Premium extentions:
+Our Premium extensions:
 ----------------------
 [Magento Free Gift Promotions](http://www.proxiblue.com.au/magento-gift-promotions.html "Magento Free Gift Promotions")
 The ultimate magento gift promotions module - clean code, and it just works!
