@@ -29,7 +29,9 @@ class ProxiBlue_GlobalHandle_Model_Observer
                 $category = mage::registry('current_category');
                 if ($category instanceof Mage_Catalog_Model_Category) {
                     $name = str_replace(' ', '_', strtolower($category->getName()));
+                    $urlKey = str_replace('-', '_', strtolower($category->getUrlKey()));
                     $layout->getUpdate()->addHandle('CATEGORY_' . $name);
+                    $layout->getUpdate()->addHandle('CATEGORY_' . $urlKey);
                 }
             }
 
