@@ -32,6 +32,13 @@ class ProxiBlue_GlobalHandle_Model_Observer
                     $urlKey = str_replace('-', '_', strtolower($category->getUrlKey()));
                     $layout->getUpdate()->addHandle('CATEGORY_' . $name);
                     $layout->getUpdate()->addHandle('CATEGORY_' . $urlKey);
+                    // inject custom page layout handle
+                    // ref: http://stackoverflow.com/questions/20249894/magento-1-7-how-to-use-the-page-layout-handle
+                    $design = Mage::getSingleton('catalog/design');
+                    $settings = $design->getDesignSettings($category);
+                    if($settings->getPageLayout()) {
+                        $layout->getUpdate()->addHandle($settings->getPageLayout());
+                    }
                 }
             }
 

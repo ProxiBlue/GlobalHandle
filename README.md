@@ -105,8 +105,14 @@ The template itself would simply the the field:
        </div>
     </li>
 
+Fixes Category Layout Handles
+=============================
 
-Our Premium extensions:
+ref: http://stackoverflow.com/questions/20249894/magento-1-7-how-to-use-the-page-layout-handle
+Will now inject the category handle, allowing you to target teh category via its own layout handle as set in admin
+
+
+Premium extensions:
 ----------------------
 [Magento Free Gift Promotions](http://www.proxiblue.com.au/magento-gift-promotions.html "Magento Free Gift Promotions")
 The ultimate magento gift promotions module - clean code, and it just works!
