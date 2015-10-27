@@ -16,12 +16,12 @@
   "extra": {
     "map": [
       [
-        "/app/code/community/ProxiBlue/GlobalHandle/",
-        "/app/code/community/ProxiBlue/GlobalHandle/"
+        "app/code/community/ProxiBlue/GlobalHandle/",
+        "app/code/community/ProxiBlue/GlobalHandle/"
       ],
       [
-        "/app/etc/modules/ProxiBlue_GlobalHandle.xml",
-        "/app/etc/modules/ProxiBlue_GlobalHandle.xml"
+        "app/etc/modules/ProxiBlue_GlobalHandle.xml",
+        "app/etc/modules/ProxiBlue_GlobalHandle.xml"
       ]
     ]
   }
